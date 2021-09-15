@@ -1,2 +1,0 @@
-to convert ipynb to pdf:
-jupyter-nbconvert --to PDFviaHTML first.ipynb
