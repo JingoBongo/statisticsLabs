@@ -1,0 +1,9 @@
+1)
+mean - the average of a data set.
+mode -  the most common number in a data set.
+median - is the middle of the set of numbers.
+
+2) then go
+variance - 
+standard deviation -  
+range - 
