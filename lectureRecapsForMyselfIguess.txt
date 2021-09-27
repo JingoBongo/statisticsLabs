@@ -1,9 +1,221 @@
-1)
-mean - the average of a data set.
-mode -  the most common number in a data set.
-median - is the middle of the set of numbers.
+Descriptive Statistics:
 
-2) then go
-variance - 
-standard deviation -  
-range - 
+==============================================================================================================================
+1)    Measures of central tendency: mean, median, mode  ======================================================================
+==============================================================================================================================
+mean - the average of a data set.
+            Meaningful for interval and ratio data (continuous variables).
+            Affected by unusually large or small observations (outliers).
+
+mode -  the most common number in a data set.
+            Not affected by extreme values.
+            Meaningful for ratio, interval, and ordinal data.
+
+median - is the middle of the set of numbers.
+            Useful when data consist of a small number of unique values.
+            Can be used when the data are nominal or categorical such as gender,
+            religion, political affiliation, etc.
+
+==============================================================================================================================
+2)       Measures of variability: ============================================================================================
+==============================================================================================================================
+         Variability is the degree of dispersion in the data
+variance - average of squared distances from the mean
+            ---Variance is expressed in much larger units (e.g., meters squared)
+            The calculation of variance uses squares because it weighs outliers more heavily (!!!!!)
+            than data closer to the mean. This calculation also prevents differences above the 
+            mean from canceling out those below, which would result in a variance of zero.
+
+standard deviation - average distance from the mean
+            ---Standard deviation is expressed in the same units as the original values (e.g., meters).
+            Standard deviation and Mean are arguably the most important statistics as
+            they play a vital role in almost all statistical inference procedures.
+
+range - the difference between the highest and lowest values
+            The advantage of the range is its simplicity.
+            The disadvantage is also its simplicity.
+
+(!!!!!!!)   Measures of central tendency like Mean, Median and Mode can only
+            paint a partial picture.
+            Average statistics are incomplete without standard deviation/variance.
+            Risk metrics are all about variance
+
+            If the distribution is bell shaped, we can use the
+            Empirical Rule.
+        68% of observations fall within one standard deviation of the mean
+        95% of observations fall within two standard deviations of the mean
+        99.7% of observations fall within three standard deviations of the mean
+
+(!!!!!!!)   If the distribution is not bell shaped, we can use the more general
+            Chebysheffs Theorem (see lab 1? or tutorialspoint explanation)
+            https://www.tutorialspoint.com/statistics/chebyshev_theorem.htm
+
+
+kurtosis - is a measure of whether the data are heavy-tailed or light-tailed relative to
+            ---a normal distribution. That is, data sets with high kurtosis tend to have heavy tails, or outliers. 
+            ---Data sets with low kurtosis tend to have light tails, or lack of outliers. A uniform distribution would 
+            ---be the extreme case.
+            --Negative kurtosis looks like a hill, so there are more outliers
+            --Positive kurtosis looks like a sharp mountain, less outliers.
+            --Normal distribution looks like... Hat? Gauss distribution? it is IT actually...
+            -Expected value is 3, more taild, highr kurtosis; here more actaully appears not that 'more' for me, but meh
+            -!!IT IS NOT ABOUT TAILS-OUTLIERS, JUST THE VALUES FAR MORE OR LESS THAN THE MEAN!!
+            When a set of approximately normal data is graphed via a histogram,
+            it shows a bell peak and most data within three standard deviations
+            (plus or minus) of the mean.
+                ex.:When high kurtosis is present, the tails extend farther than the three
+                    standard deviations of the normal bell-curved distribution.
+                    e.g. For investors, high kurtosis of the return distribution implies the investor will
+                    experience occasional extreme returns (either positive or negative), – more extreme than
+                    the usual + or - three standard deviations from the mean that is predicted by the normal
+                    distribution of returns.
+
+
+skewness - is a measure of symmetry, or more precisely, the lack of symmetry
+            The mean of positively skewed data will be greater than the median.
+            In a distribution that is negatively skewed, the opposite is the case
+            If the data graphs symmetrically, the distribution has zero skewness,
+            regardless of how long or fat the tails are
+
+The histogram is an effective graphical technique for showing both the skewness and kurtosis of data set.
+
+Graphical Techniques:
+pie charts, bar graphs, histograms, box plots, dot plots, scatter plots
+
+==============================================================================================================================
+3)============================================================================================================================
+==============================================================================================================================
+There are a lot of images so I will need to stick to the presentation I guess
+
+The only allowable calculation on nominal data is to count the frequency
+or compute the percentage that each value of the variable represents.
+
+To visualize the Frequency Distribution use __Bar Charts__
+
+To emphasize the relative frequencies use Pie Charts
+
+To compare frequencies of different categories use Dot Plots.
+    A Dot Plot is esentially a Bar Chart put on it’s side
+
+Nominal & Ordinal data
+Nominal - Nominal data is defined as data that is used for naming or labelling variables, 
+            without any quantitative value. It is sometimes called “named” data - a meaning 
+            coined from the word nominal. 
+            ex.: country, gender, race, hair color
+
+Ordinal - Ordinal data is a type of categorical data with an order. The variables in ordinal data are listed 
+            in an ordered manner. The ordinal variables are usually numbered, so as to indicate the order of 
+            the list. However, the numbers are not mathematically measured or determined but are merely assigned 
+            as labels for opinions.
+            ex.: a position in class as “First” or “Second”. Note that the nominal data examples are nouns, with 
+                 no order to them while ordinal data examples come with a level of order. 
+
+Given you have collected data about first month telephone bills of new customers, what data can be extracted
+from it?
+
+Executives might be interested to know:
+How the numbers are distributed between the minimul bill of 0 and
+the maximum of 119.63.
+Are there many small bills and few large bills?
+What is the typical bill?
+Are the bills somewhat similar or do they vary considerably?
+
+Solution:
+Construct a frequency distribution from which a histogram can be drawn.
+
+be aware of intervals. in python graphs it was.... ugh.. bins!
+
+How to know how many intervals to use? 
+50 - 5-7
+200-500 - 7-9
+500-1000 - 10-11
+1000-5000 - 11-13
+5000 - 50000 - 13-17
+ > 50000 - 17-20
+...
+1 + 3.3 * log(n)
+
+Histogramms appear to be: symmetric, pos/negatively skewed, unimodal (1 hill), bimodal (2 hills), bell-shaped(Gauss)
+    
+Stem-and-Leaf Display
+            With histograms we lose potentially useful information by classifying the observations.
+            Split each observation into two parts, a stem and a leaf.
+            (I have no clue how to use it tho; TODO)
+
+==============================================================================================================================
+4-5)==========================================================================================================================
+==============================================================================================================================
+1 Graphical Techniques for Interval Data Continued...
+    The Ogive Curve
+    Box Plots
+    Line Charts
+2 Description of the Relationship Between Two Variables
+    Scatter Plot
+    Covariance
+    Correlation Coefficient
+
+__Graphical Techniques for Interval Data Continued
+
+To build the histogram and the Stem-and-Leaf Charts we used the
+Frequency Distribution
+
+To learn the proportion of the observations that fall into each class create
+the Relative Frequency Distribution. (Same, but in percents)
+
+Often with numerical(interval) data we may be interested in knowing the
+percentage of observations that lie bellow a certain value. To Learn this
+use the cumulative frequency distribution. (Same as relative, but adding all the values BELOW)
+
+To visualize the cumulative frequency distribution use the Ogive Curve. (Ogive plot)
+Tho the plot gave me 0 information at all (TODO)
+
+---
+Percentiles are mesures of relative standing. They give you an idea about
+the position of particular values relative to the entire data set
+
+About box plots: those with прямоугольники с чертой посередине и линиями по бокам...
+Start of the rectangle is Q1 (25 percentile)
+Middle line is Q2, 50 percentile 
+Third is 75% percentile
+
+Interquartile range: Q3 - Q1
+
+In the example 
+Q1 = 9.275 
+Q2 = 26.905 
+Q3 = 84.9425
+Interquartile range(IR): Q3 - Q1 = 75.6675 , so
+To find the outliers:
+1.5 x (IR)75.6675 = 113.5013 (res1)
+(Q1)9.275 - (res1)113.5013 = 104.226 (res2)
+(Q3)84.9425 + (res1)113.5013 = 198.4438 (res3)
+for some goddamn reason.
+for image to have some clue read chapter 4-5 page 11-13
+
+Line Chart page 15 (Positive trend), looks like a growing line .-'
+page 16 trendless chart, has no trend/direction
+
+__Description of the Relationship Between Two Variables
+
+To understand the relationship between two variables practitioners use
+Scatter Plots.
+---positive, negative, nonlinear, no relationship
+relationship strength; it is strong if on graph it looks like a line, clowd means no relationship
+Strong correlation does not mean causality tho
+
+Covariance - is a measure of the relationship between two random variables.
+            The metric evaluates how much - to what extent - the variables change
+            together. In other words, it is essentially a measure of the variance
+            between two variables.
+
+it appears by example that positive high covariance magnitude means proportional growth, negative inverse proportional, 
+closer to zero less covariance at all 
+(!!!!) The magnitude is impossible to judge without additional statistics
+Solution: Correlation Coefficient
+
+Сorrelation coefficient -  is a statistical measure of the degree to which
+                            changes to the value of one variable predict change to the value of
+                            another. The sign tells us about the direction of the relationship and the
+                            magnitude about its strength.
+and as a value it looks to me it follows same principals, but values are between -1 and 1
+
