@@ -238,7 +238,7 @@ in a line. Then  we try to make a linear equation that roughly corresponds to th
     y is dependent variable
     x is independent variable
     B0 (beta) is a constant 
-    B1 is the slope / coefficient
+    B1 is the slope / coefficient  
     e (epsilon) is an error
 
 In order to find coefficients:
@@ -248,3 +248,62 @@ In order to find coefficients:
 
 !!
 https://www.dummies.com/education/math/business-statistics/test-the-estimated-regression-equation-using-the-coefficient-of-determination-r2/
+
+for population
+covariance - sigma
+variance - sigma squared*
+=====for sample it is S
+
+
+lecture 5 - variance, covariance, correlation coefficient computation
+
+lecture 7 - beta1, beta0, linear regression 
+
+lect 8
+TSS - total sum of squares = variation in linear regression
+
+TSS = ESS + RSS
+were ESS is explained sum of squares, the hatted Y minus mean Y squared;
+and the RSS is our residual (error in sample ) that can't be explained  
+R squared - coefficient of determination = ESS / TSS = 1 - RSS / TSS = formula from presentation 8
+
+coefficient is  -1 < in between < 1
+
+to solve a couple of regression problems they came up with adjusted r squared with a line above its head
+
+more variables -> K grows.
+
+LECTURE 10
+there are hypothesis testing, where we try to reject the H0 null hyp.
+ then we have a level of confidence of 95%, 99% = C
+ THEN  we have level of significance that is 1 - C for some reason = alpha
+
+ p value is the chance of getting alternative hyp by chance, and if its < 5%, is gut
+
+ BUT std of sample = (std of population) / sqrt( sample size)   
+ the Z here = H0 result minus Ha result divided by sample std
+ and Z is how many std far the result is based on normal distribution. and therefore we get a chance
+ like how often we would meet this on normal conditions
+
+ in the example it is told that after 3 std from the mean, it is left a 0.003 chance of getting such result
+ https://www.khanacademy.org/math/statistics-probability/significance-tests-one-sample/more-significance-testing-videos/v/hypothesis-testing-and-p-values
+
+ t test for smaller group of data
+ z test for larger
+
+ p value is the probability that we rejected true H0, so H0 was true and we rejected it
+
+ the higher t value, the smaller is the area on the graph and therefore the smaller is ur chance blabla^
+
+ now F tests
+ are used to measure the fir of the entire model
+ f test = join hypothesis test
+
+ M big is degrees of freedom in numerator = amount of variables you include in H0
+ degree of freedom in denominator is = N - K - 1;
+ K also seems to be number of variables; N is number of observations
+ and you can use that in special table for F critical value
+
+ so F critical is where above that our F statistic is bigger, very huge and therefore we reject the H0
+
+
