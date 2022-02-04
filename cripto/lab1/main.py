@@ -10,6 +10,8 @@ import base64
 
 # maybe due to entire algorithm being based on xor operations I will keep the spirit and hide my metadata in xors as well
 
+# is there a chance to implement one way function on top of that all?
+
 def sstr(s):
     new = ""
     for x in s:
